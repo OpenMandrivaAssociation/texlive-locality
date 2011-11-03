@@ -1,3 +1,9 @@
+# revision 20422
+# category Package
+# catalog-ctan /macros/latex/contrib/locality
+# catalog-date 2010-11-12 15:28:10 +0100
+# catalog-license lppl1.3
+# catalog-version 0.2
 Name:		texlive-locality
 Version:	0.2
 Release:	1
@@ -46,6 +52,7 @@ the package; not all of its facilities are working optimally.
 #- source
 %doc %{_texmfdistdir}/source/latex/locality/locality.dtx
 %doc %{_texmfdistdir}/source/latex/locality/locality.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ the package; not all of its facilities are working optimally.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

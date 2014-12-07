@@ -6,7 +6,7 @@
 # catalog-version 0.2
 Name:		texlive-locality
 Version:	0.2
-Release:	8
+Release:	9
 Summary:	Various macros for keeping things local
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/locality

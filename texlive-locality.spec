@@ -1,19 +1,13 @@
-# revision 20422
-# category Package
-# catalog-ctan /macros/latex/contrib/locality
-# catalog-date 2010-11-12 15:28:10 +0100
-# catalog-license lppl1.3
-# catalog-version 0.2
 Name:		texlive-locality
-Version:	0.2
-Release:	11
+Version:	20422
+Release:	1
 Summary:	Various macros for keeping things local
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/locality
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ mechanisms. The present release offers a preliminary view of
 the package; not all of its facilities are working optimally.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,24 +39,11 @@ the package; not all of its facilities are working optimally.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.2-2
-+ Revision: 753409
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.2-1
-+ Revision: 718876
-- texlive-locality
-- texlive-locality
-- texlive-locality
-- texlive-locality
-

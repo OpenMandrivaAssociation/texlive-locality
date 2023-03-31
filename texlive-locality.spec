@@ -1,6 +1,6 @@
 Name:		texlive-locality
 Version:	20422
-Release:	1
+Release:	2
 Summary:	Various macros for keeping things local
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/locality

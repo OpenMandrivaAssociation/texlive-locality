@@ -3,7 +3,7 @@ Version:	20422
 Release:	2
 Summary:	Various macros for keeping things local
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/locality
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/locality
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/locality.doc.r%{version}.tar.xz
